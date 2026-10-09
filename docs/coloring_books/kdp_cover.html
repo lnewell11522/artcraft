@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turtle's Busy Day Cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  /* Amazon KDP paperback cover, 8.5 x 11 in trim, 48 white-paper pages.
+     Full size = 0.125 bleed + 8.5 back + 0.1081 spine + 8.5 front + 0.125 bleed = 17.3581 x 11.25 in.
+     Under 79 pages KDP allows no spine text, so the spine is a plain color band. */
+  @page { size: 17.3581in 11.25in; margin: 0; }
+  :root { color-scheme: light; --sky: #bfe6fb; --grass: #8fd16a; --ink: #1d3557; }
+  body { margin: 0; background: #e9e6df; }
+  
+  .tip { max-width: 8.5in; margin: 16px auto; padding: 12px 16px; background: #fff; border-radius: 8px;
+         font: 15px/1.45 system-ui, sans-serif; box-sizing: border-box; color: #222; }
+  .tip b { font-weight: 600; }
+  .tip button { font: inherit; padding: 6px 14px; margin-top: 8px; cursor: pointer; }
+  @media print { .tip { display: none; } }
+
+  .tip { max-width: 10in; }
+  .scroll { overflow-x: auto; padding: 0 16px 16px; }
+  .cover { position: relative; display: flex; width: 17.3581in; height: 11.25in; margin: 0 auto;
+           box-shadow: 0 2px 10px rgba(0,0,0,.15); overflow: hidden; background: #fff; }
+  .back { position: relative; box-sizing: border-box; width: 8.625in; height: 100%;
+          padding: 0.75in 0.6in 0.75in 0.75in;
+          background: linear-gradient(var(--sky) 0 72%, var(--grass) 72% 100%);
+          font-family: "Fredoka", "Comic Sans MS", sans-serif; color: var(--ink); }
+  .back h2 { margin: 0 0 0.2in; font-size: 40px; font-weight: 700; text-align: center; }
+  .blurb { background: rgba(255,255,255,.88); border-radius: 0.3in; padding: 0.3in 0.35in;
+           font-size: 19px; line-height: 1.45; font-weight: 500; }
+  .blurb ul { margin: 0.12in 0 0; padding-left: 0.3in; }
+  .thumbs { display: flex; gap: 0.2in; justify-content: center; margin-top: 0.35in; }
+  .thumbs img { width: 2.1in; height: 2.8in; object-fit: contain; background: #fff; border: 3px solid var(--ink);
+                border-radius: 0.12in; }
+  /* KDP prints its barcode here: keep 2 x 1.2 in clear, 0.25 in from the trim at the lower right of the back. */
+  .barcode { position: absolute; right: 0.25in; bottom: 0.375in; width: 2in; height: 1.2in; }
+  .spine { width: 0.1081in; height: 100%; background: var(--grass); }
+  .front { width: 8.625in; height: 100%; background: var(--sky); }
+  .front img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  @media print {
+    body { background: #fff; }
+    .scroll { overflow: visible; padding: 0; }
+    .cover { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="tip"><b>KDP cover: 17.3581 x 11.25 in, back + spine + front, with bleed.</b><br>
+Use Chrome on a computer: Print &rarr; Destination <b>Save as PDF</b>, Margins <b>None</b>, Scale <b>100</b>, tick <b>Background graphics</b>. Upload it as your KDP cover PDF.<br>
+<button onclick="window.print()">Save cover PDF</button></div>
+<div class="scroll"><div class="cover">
+  <section class="back">
+    <h2>A Busy Day of Fun!</h2>
+    <div class="blurb">Follow Turtle from wake-up to bedtime! Little artists ages 2 to 5 will love coloring Turtle riding the school bus, brushing teeth, playing with cars, building a sandcastle and more.
+      <ul>
+        <li>23 big, simple pictures with thick, easy lines</li>
+        <li>One picture per page, blank backs to stop bleed-through</li>
+        <li>Large 8.5 x 11 in pages for little hands</li>
+      </ul>
+    </div>
+    <div class="thumbs"><img src="https://media.viewmax.io/users/jJqPHfS2s9gz0tmNuVOZRX7j85zFf3H8/generated/4eac5b00-d432-44f3-9eb2-0dca7cf22ff9.jpg" alt="Brushing teeth"><img src="https://media.viewmax.io/users/jJqPHfS2s9gz0tmNuVOZRX7j85zFf3H8/generated/0eff85c5-4058-490f-98ec-0609f42abab1.jpg" alt="School bus"><img src="https://media.viewmax.io/users/jJqPHfS2s9gz0tmNuVOZRX7j85zFf3H8/generated/9064e945-023f-49b7-b2d9-e02c2d7d850d.jpg" alt="Riding a bike"></div>
+    <div class="barcode"></div>
+  </section>
+  <section class="spine"></section>
+  <section class="front"><img src="https://media.viewmax.io/users/jJqPHfS2s9gz0tmNuVOZRX7j85zFf3H8/generated/3a75734e-df74-4117-a73f-3969ed20fac1.png" alt="Turtle's Busy Day front cover"></section>
+</div></div>
+</body>
+</html>
